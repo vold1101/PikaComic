@@ -55,28 +55,12 @@
 
 #pragma mark -
 - (void)showBrowser {
-    ComicPhotoBrowser *browser = self.browser;
-    
-    // Customise selection images to change colours if required
-    //    browser.customImageSelectedIconName = @"ImageSelected.png";
-    //    browser.customImageSelectedSmallIconName = @"ImageSelectedSmall.png";
-    
-    // Optionally set the current visible photo before displaying
-    [browser setCurrentPhotoIndex:1];
-    [self.view addSubview:browser.view];
-    [self addChildViewController:browser];
-    
-    [UIView animateWithDuration:0.5 animations:^{
-        browser.view.alpha = 1;
-    }];
 }
 
 - (void)removeBrowser {
-    [self.browser.view removeFromSuperview];
-    [self.browser removeFromParentViewController];
 }
 
-- (ComicPhotoBrowser *)browser {
+- (MJPhotoBrowser *)browser {
 
     return nil;
 }

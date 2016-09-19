@@ -12,4 +12,6 @@ pod 'MJExtension', '2.0.4'
 pod 'MJRefresh','3.1.9'
 pod 'SDWebImage','3.7.5'
 
+pod 'YLGIFImage'
+pod 'SVProgressHUD'
 end

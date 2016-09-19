@@ -10,6 +10,7 @@
 
 @protocol MJPhotoBrowserDelegate <NSObject>
 
+@optional
 - (void)photoBrowser:(MJPhotoBrowser *)browser didShowIndex:(NSInteger)index;
 
 @end

@@ -30,6 +30,8 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - SVProgressHUD (2.0.3)
+  - YLGIFImage (0.11)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -40,6 +42,8 @@ DEPENDENCIES:
   - Realm
   - Realm/Headers
   - SDWebImage (= 3.7.5)
+  - SVProgressHUD
+  - YLGIFImage
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -49,7 +53,7 @@ SPEC CHECKSUMS:
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   Realm: 2e15e39d35b08abb529e212ed5d8af107b5236c8
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
 
-PODFILE CHECKSUM: ffcb0943affe73d0c64b0de9d332f8256f9d7c96
-
-COCOAPODS: 1.0.1
+COCOAPODS: 0.39.0
