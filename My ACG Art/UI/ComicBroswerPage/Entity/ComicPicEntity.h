@@ -22,8 +22,7 @@ RLM_ARRAY_TYPE(ComicPicEntity);
 
 @interface ComicPicsEntity : RLMObject
 
-@property NSInteger id;
 @property NSInteger ep;
-@property RLMArray<ComicPicEntity *><ComicPicEntity> *ComicPicEntity;
+@property RLMArray<ComicPicEntity *><ComicPicEntity> *comicPicArray;
 
 @end

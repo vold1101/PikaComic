@@ -29,7 +29,7 @@
         if ([[[[self class] replacedKeyFromPropertyName] allKeys] containsObject:key]) {
             NSString* replaceKey = [[self class] replacedKeyFromPropertyName][key];
             [self setValue:comicDic[key] forKey:replaceKey];
-        } else {
+        } else if (![key isEqualToString:[[self class] primaryKey]] ){
             [self setValue:comicDic[key] forKey:key];
 
         }

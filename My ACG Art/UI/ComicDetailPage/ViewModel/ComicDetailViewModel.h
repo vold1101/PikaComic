@@ -17,4 +17,9 @@
  */
 @property(nonatomic,strong)RACCommand *fetchComicDetailEntityCommand;
 
+/**
+ *  已获取概要
+ */
+@property (nonatomic,assign) BOOL didLoadEntity;
+
 @end

@@ -11,11 +11,10 @@
 @protocol MJPhotoBrowserDelegate <NSObject>
 
 @optional
-- (void)photoBrowser:(MJPhotoBrowser *)browser didShowIndex:(NSInteger)index;
+- (void)browser:(MJPhotoBrowser *)browser didShowIndex:(NSInteger)index;
+- (void)tapActionWithBrowser:(MJPhotoBrowser *)browser;
 
 @end
-
-@protocol MJPhotoBrowserDelegate;
 
 @interface MJPhotoBrowser : NSObject <UIScrollViewDelegate>
 // 所有的图片对象
@@ -25,7 +24,12 @@
 // 保存按钮
 @property (nonatomic, assign) NSUInteger showSaveBtn;
 
+@property (nonatomic, weak) id<MJPhotoBrowserDelegate>delegate;
+
 // 显示
 - (void)showOnView:(UIView *)view;
+
+//滚动操作
+- (void)scrollToIndex:(NSInteger)index;
 
 @end

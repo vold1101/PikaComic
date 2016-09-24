@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ComicDetailEntity.h"
 
 @interface ComicBroswerViewModel : NSObject
 
-@property (nonatomic, assign) NSInteger id;
+@property (nonatomic, strong) ComicDetailEntity* detailEntity;
 @property (nonatomic, assign) NSInteger ep;
 
 @property (nonatomic,strong) RACCommand* fetchComicPagesCommand;

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ComicDetailEntity.h"
 
 @interface ComicBroswerController : UIViewController
 
-@property (nonatomic, assign) NSInteger id;
-@property (nonatomic, assign) NSInteger ep;
+@property (nonatomic,strong) ComicDetailEntity* detailEntity;
+@property (nonatomic,assign) NSInteger ep;
 
 @end

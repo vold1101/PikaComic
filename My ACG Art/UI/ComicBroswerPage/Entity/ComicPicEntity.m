@@ -14,5 +14,7 @@
 
 @implementation ComicPicsEntity
 
-
++ (NSString *)primaryKey {
+    return @"ep";
+}
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ComicPicEntity.h"
 
 @interface ComicDetailEntity : RLMObject
 
@@ -43,5 +44,7 @@
 @property (nonatomic, copy) NSString *name;
 
 @property (nonatomic, assign) NSInteger ep_count;
+
+@property ComicPicsEntity* comicPicsEntity;
 
 @end

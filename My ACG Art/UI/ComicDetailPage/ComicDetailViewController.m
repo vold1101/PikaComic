@@ -7,6 +7,7 @@
 //
 
 #import "ComicDetailViewController.h"
+#import "ComicBroswerController.h"
 #import "ComicDetailViewModel.h"
 #import "ComicDetailEntity.h"
 
@@ -40,17 +41,28 @@
     [self loadViews];
     
     @weakify(self);
-    [[self.viewModel.fetchComicDetailEntityCommand execute:[NSString stringWithFormat:@"comics/%ld",(long)self.comicListEntity.id]] subscribeNext:^(ComicDetailEntity* entity) {
+    [[self.viewModel.fetchComicDetailEntityCommand execute:AJStr(comics/%ld,(long)self.comicListEntity.id)] subscribeNext:^(ComicDetailEntity* entity) {
         @strongify(self);
         self.entity = entity;
     } error:^(NSError *error) {
         NSLog(@"%@",error);
     }];
+    [self bindEnvents];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)bindEnvents {
+    @weakify(self);
+    self.readBtn.rac_command = [[RACCommand alloc] initWithEnabled:RACObserve(self.viewModel, didLoadEntity) signalBlock:^RACSignal *(UIButton* input) {
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            @strongify(self);
+            ComicBroswerController* vc = [[ComicBroswerController alloc] init];
+            vc.detailEntity = self.entity;
+            vc.ep = 1;
+            [self.navigationController pushViewController:vc animated:YES];
+            [subscriber sendCompleted];
+            return nil;
+        }];
+    }];
 }
 
 - (ComicDetailViewModel*)viewModel {

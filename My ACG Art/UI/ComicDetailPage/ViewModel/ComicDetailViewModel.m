@@ -30,20 +30,21 @@
             __block ComicDetailEntity* localEntity;
             if (res.count) {
                 localEntity = res.firstObject;
+                self.didLoadEntity = YES;
                 [subscriber sendNext:res.firstObject];
             }
             
             [self requestForNewsEntityWithUrl:input success:^(NSDictionary *dic) {
-                
-                if (localEntity) {
-                    [localEntity updateFromNet:dic];
-                } else {
-                    localEntity = [ComicDetailEntity entityFromNet:dic];
-                }
-                
                 [[RLMRealm defaultRealm] transactionWithBlock:^{
+                    if (localEntity) {
+                        [localEntity updateFromNet:dic];
+                    } else {
+                        localEntity = [ComicDetailEntity entityFromNet:dic];
+                    }
                     [[RLMRealm defaultRealm] addOrUpdateObject:localEntity];
                 }];
+                self.didLoadEntity = YES;
+                
                 [subscriber sendNext:localEntity];
                 [subscriber sendCompleted];
             } failure:^(NSError *error) {

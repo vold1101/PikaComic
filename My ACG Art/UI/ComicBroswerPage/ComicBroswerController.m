@@ -26,9 +26,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = kBlackColor;
-    NSString *url = AJStr(comics/%ld/ep/%ld,(long)self.id,(long)self.ep);
     @weakify(self)
-    [[self.viewModel.fetchComicPagesCommand execute:url] subscribeNext:^(NSArray<ComicPicEntity *>* arr) {
+    [[self.viewModel.fetchComicPagesCommand execute:nil] subscribeNext:^(RLMArray* arr) {
         @strongify(self)
         NSMutableArray* photoArr = [[NSMutableArray alloc] initWithCapacity:arr.count];
         for (ComicPicEntity* entity in arr) {
@@ -55,19 +54,25 @@
 
 #pragma mark -
 - (void)showBrowser {
+    self.browser.photos = self.dataSource;
+    [self.browser showOnView:self.view];
 }
 
 - (void)removeBrowser {
 }
 
 - (MJPhotoBrowser *)browser {
-
-    return nil;
+    if (!_browser) {
+        _browser = [[MJPhotoBrowser alloc] init];
+    }
+    return _browser;
 }
 
 - (ComicBroswerViewModel *)viewModel {
     if (!_viewModel) {
         _viewModel = [[ComicBroswerViewModel alloc] init];
+        _viewModel.detailEntity = self.detailEntity;
+        _viewModel.ep = self.ep;
     }
     return _viewModel;
 }
