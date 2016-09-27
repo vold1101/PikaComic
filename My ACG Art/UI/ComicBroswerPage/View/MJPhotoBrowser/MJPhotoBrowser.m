@@ -235,10 +235,11 @@
 - (void)updateTollbarState
 {
     _currentPhotoIndex = _photoScrollView.contentOffset.x / _photoScrollView.frame.size.width;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(browser:didShowIndex:)]) {
+        [self.delegate browser:self didShowIndex:_currentPhotoIndex];
+    }
     _toolbar.currentPhotoIndex = _currentPhotoIndex;
 }
-
-
 
 #pragma mark - MJPhotoViewDelegate
 - (void)photoViewSingleTap:(MJPhotoView *)photoView
@@ -257,6 +258,11 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 	[self showPhotos];
     [self updateTollbarState];
+}
+
+#pragma mark -
+- (void)scrollToIndex:(NSInteger)index {
+    
 }
 
 @end

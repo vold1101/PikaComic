@@ -56,8 +56,22 @@
 }
 
 #pragma mark -
+- (void)browser:(MJPhotoBrowser *)browser didShowIndex:(NSInteger)index {
+    @weakify(self)
+    [[RLMRealm defaultRealm] transactionWithBlock:^{
+        @strongify(self)
+        self.detailEntity.comicPicsEntity.readOffset = index;
+    }];
+}
+
+- (void)tapActionWithBrowser:(MJPhotoBrowser *)browser {
+    
+}
+
+#pragma mark -
 - (void)showBrowser {
     self.browser.photos = self.dataSource;
+    self.browser.currentPhotoIndex = self.detailEntity.comicPicsEntity.readOffset;
     [self.browser showOnView:self.view];
 }
 
@@ -67,6 +81,7 @@
 - (MJPhotoBrowser *)browser {
     if (!_browser) {
         _browser = [[MJPhotoBrowser alloc] init];
+        _browser.delegate = self;
     }
     return _browser;
 }
