@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ComicDetailEntity.h"
+#import "PikaViewController.h"
 
-@interface ComicBroswerController : UIViewController
+@interface ComicBroswerController : PikaViewController
 
 @property (nonatomic,strong) ComicDetailEntity* detailEntity;
 @property (nonatomic,assign) NSInteger ep;

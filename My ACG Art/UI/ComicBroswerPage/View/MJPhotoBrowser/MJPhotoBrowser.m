@@ -243,15 +243,9 @@
 #pragma mark - MJPhotoViewDelegate
 - (void)photoViewSingleTap:(MJPhotoView *)photoView
 {
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
-    // 移除工具条
-    [self.toolbar removeFromSuperview];
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        self.view.alpha = 0;
-    } completion:^(BOOL finished) {
-        [self.view removeFromSuperview];
-    }];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tapActionWithBrowser:)]) {
+        [self.delegate tapActionWithBrowser:self];
+    }
 }
 
 - (void)photoViewImageFinishLoad:(MJPhotoView *)photoView

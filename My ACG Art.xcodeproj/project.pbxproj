@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		508E3EB0252AB6700328514A /* libPods-My ACG Art.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB44A65078396411A0AD4D7B /* libPods-My ACG Art.a */; };
+		78811301DFF219230B20BE3D /* libPods-My ACG Art.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B306DF3E67A214CB33B0EF11 /* libPods-My ACG Art.a */; };
 		A02438261D8C179A004AFCE9 /* ComicBroswerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A02438251D8C179A004AFCE9 /* ComicBroswerViewModel.m */; };
 		A02438351D8C1FEA004AFCE9 /* MJPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A02438291D8C1FEA004AFCE9 /* MJPhoto.m */; };
 		A02438361D8C1FEA004AFCE9 /* MJPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A024382A1D8C1FEA004AFCE9 /* MJPhotoBrowser.bundle */; };
@@ -25,6 +25,7 @@
 		A085F6381D8199C10023CE92 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A085F6371D8199C10023CE92 /* HomeViewController.m */; };
 		A085F6401D819C120023CE92 /* UIViewController+NavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A085F63F1D819C120023CE92 /* UIViewController+NavBar.m */; };
 		A085F6441D819FC60023CE92 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A085F6431D819FC60023CE92 /* NetManager.m */; };
+		A0E210741D977C3A002111DD /* PikaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E210731D977C3A002111DD /* PikaViewController.m */; };
 		A0E7B16D1D8066B100E7E22C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B16C1D8066B100E7E22C /* main.m */; };
 		A0E7B1701D8066B100E7E22C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0E7B16F1D8066B100E7E22C /* AppDelegate.m */; };
 		A0E7B17B1D8066B100E7E22C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E7B17A1D8066B100E7E22C /* Assets.xcassets */; };
@@ -61,8 +62,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5129F00862F745C86A35E345 /* Pods-My ACG Art.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ACG Art.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My ACG Art/Pods-My ACG Art.debug.xcconfig"; sourceTree = "<group>"; };
-		8EAB405016B0ADA86010988C /* Pods-My ACG Art.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ACG Art.release.xcconfig"; path = "Pods/Target Support Files/Pods-My ACG Art/Pods-My ACG Art.release.xcconfig"; sourceTree = "<group>"; };
 		A02438241D8C179A004AFCE9 /* ComicBroswerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicBroswerViewModel.h; sourceTree = "<group>"; };
 		A02438251D8C179A004AFCE9 /* ComicBroswerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicBroswerViewModel.m; sourceTree = "<group>"; };
 		A02438281D8C1FEA004AFCE9 /* MJPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPhoto.h; sourceTree = "<group>"; };
@@ -96,6 +95,8 @@
 		A085F63F1D819C120023CE92 /* UIViewController+NavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavBar.m"; sourceTree = "<group>"; };
 		A085F6421D819FC60023CE92 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
 		A085F6431D819FC60023CE92 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
+		A0E210721D977C3A002111DD /* PikaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PikaViewController.h; sourceTree = "<group>"; };
+		A0E210731D977C3A002111DD /* PikaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PikaViewController.m; sourceTree = "<group>"; };
 		A0E7B1681D8066B100E7E22C /* My ACG Art.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My ACG Art.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E7B16C1D8066B100E7E22C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A0E7B16E1D8066B100E7E22C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -132,7 +133,9 @@
 		A0F466051D887347002C6A86 /* ComicBroswerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicBroswerController.m; sourceTree = "<group>"; };
 		A0F466071D8873BB002C6A86 /* ComicPicEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicPicEntity.h; sourceTree = "<group>"; };
 		A0F466081D8873BB002C6A86 /* ComicPicEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicPicEntity.m; sourceTree = "<group>"; };
-		BB44A65078396411A0AD4D7B /* libPods-My ACG Art.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-My ACG Art.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A104D9E5334BF9D48162646B /* Pods-My ACG Art.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ACG Art.release.xcconfig"; path = "Pods/Target Support Files/Pods-My ACG Art/Pods-My ACG Art.release.xcconfig"; sourceTree = "<group>"; };
+		B306DF3E67A214CB33B0EF11 /* libPods-My ACG Art.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-My ACG Art.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9349A764D21FC9AB8E1B67A /* Pods-My ACG Art.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My ACG Art.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My ACG Art/Pods-My ACG Art.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				508E3EB0252AB6700328514A /* libPods-My ACG Art.a in Frameworks */,
+				78811301DFF219230B20BE3D /* libPods-My ACG Art.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +164,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D831767A69C6C25E3C6977D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B306DF3E67A214CB33B0EF11 /* libPods-My ACG Art.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A02438271D8C1FEA004AFCE9 /* MJPhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +283,15 @@
 			path = NetManage;
 			sourceTree = "<group>";
 		};
+		A0E210711D977C22002111DD /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				A0E210721D977C3A002111DD /* PikaViewController.h */,
+				A0E210731D977C3A002111DD /* PikaViewController.m */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
 		A0E7B15F1D8066B100E7E22C = {
 			isa = PBXGroup;
 			children = (
@@ -279,8 +299,8 @@
 				A0E7B1871D8066B100E7E22C /* My ACG ArtTests */,
 				A0E7B1921D8066B100E7E22C /* My ACG ArtUITests */,
 				A0E7B1691D8066B100E7E22C /* Products */,
-				B0C4595E06FDA98F0F6D0D0F /* Pods */,
-				B46902D6EFF55D8B577DB030 /* Frameworks */,
+				F91B96E7AF35973904FE2CA8 /* Pods */,
+				2D831767A69C6C25E3C6977D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -297,6 +317,7 @@
 		A0E7B16A1D8066B100E7E22C /* My ACG Art */ = {
 			isa = PBXGroup;
 			children = (
+				A0E210711D977C22002111DD /* BaseClasses */,
 				A0E7B1A11D80689700E7E22C /* Configs */,
 				A0E7B1A41D806C8600E7E22C /* Extensions */,
 				A085F6411D819CAF0023CE92 /* NetManage */,
@@ -470,21 +491,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B0C4595E06FDA98F0F6D0D0F /* Pods */ = {
+		F91B96E7AF35973904FE2CA8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5129F00862F745C86A35E345 /* Pods-My ACG Art.debug.xcconfig */,
-				8EAB405016B0ADA86010988C /* Pods-My ACG Art.release.xcconfig */,
+				F9349A764D21FC9AB8E1B67A /* Pods-My ACG Art.debug.xcconfig */,
+				A104D9E5334BF9D48162646B /* Pods-My ACG Art.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		B46902D6EFF55D8B577DB030 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BB44A65078396411A0AD4D7B /* libPods-My ACG Art.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,7 +513,6 @@
 				A0E7B1661D8066B100E7E22C /* Resources */,
 				67A01AE98F4D869EFE25AF37 /* [CP] Embed Pods Frameworks */,
 				9CC5E06DA42E973BE909E380 /* [CP] Copy Pods Resources */,
-				A79D87E10708CBAD2C2CC876 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -558,7 +570,7 @@
 				TargetAttributes = {
 					A0E7B1671D8066B100E7E22C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9XDJXUM3W7;
+						DevelopmentTeam = B2EX4B388V;
 					};
 					A0E7B1831D8066B100E7E22C = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -648,21 +660,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-My ACG Art/Pods-My ACG Art-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A79D87E10708CBAD2C2CC876 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-My ACG Art/Pods-My ACG Art-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FDDD777B355121AB3BEF8B00 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -702,6 +699,7 @@
 				A0F465E91D8832FC002C6A86 /* ComicListEntity.m in Sources */,
 				A085F6401D819C120023CE92 /* UIViewController+NavBar.m in Sources */,
 				A02438391D8C1FEA004AFCE9 /* MJPhotoProgressView.m in Sources */,
+				A0E210741D977C3A002111DD /* PikaViewController.m in Sources */,
 				A02438351D8C1FEA004AFCE9 /* MJPhoto.m in Sources */,
 				A084D0251D87102B005D2F73 /* HomeViewModel.m in Sources */,
 				A024383A1D8C1FEA004AFCE9 /* MJPhotoToolbar.m in Sources */,
@@ -843,12 +841,12 @@
 		};
 		A0E7B1991D8066B100E7E22C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5129F00862F745C86A35E345 /* Pods-My ACG Art.debug.xcconfig */;
+			baseConfigurationReference = F9349A764D21FC9AB8E1B67A /* Pods-My ACG Art.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9XDJXUM3W7;
+				DEVELOPMENT_TEAM = B2EX4B388V;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/My ACG Art/Configs/PrefixHeader.pch";
 				INFOPLIST_FILE = "My ACG Art/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -863,12 +861,12 @@
 		};
 		A0E7B19A1D8066B100E7E22C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EAB405016B0ADA86010988C /* Pods-My ACG Art.release.xcconfig */;
+			baseConfigurationReference = A104D9E5334BF9D48162646B /* Pods-My ACG Art.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 9XDJXUM3W7;
+				DEVELOPMENT_TEAM = B2EX4B388V;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/My ACG Art/Configs/PrefixHeader.pch";
 				INFOPLIST_FILE = "My ACG Art/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

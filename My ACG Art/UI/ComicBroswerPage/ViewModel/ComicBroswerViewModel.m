@@ -29,12 +29,11 @@
                     NSArray* entities = [ComicPicEntity objectArrayWithKeyValuesArray:arr];
                     if (self.detailEntity.comicPicsEntity == nil) {
                         ComicPicsEntity* picsEntity = [[ComicPicsEntity alloc] init];
-                        picsEntity.ep = self.ep;
-                        [picsEntity.comicPicArray addObjects:entities];
-                        self.detailEntity.comicPicsEntity = picsEntity;
-//                        [[RLMRealm defaultRealm] transactionWithBlock:^{
-//                            
-//                        }];
+                        [[RLMRealm defaultRealm] transactionWithBlock:^{
+                            picsEntity.ep = self.ep;
+                            [picsEntity.comicPicArray addObjects:entities];
+                            self.detailEntity.comicPicsEntity = picsEntity;
+                        }];
                     }
                     
                     [subscriber sendNext:self.detailEntity.comicPicsEntity.comicPicArray];

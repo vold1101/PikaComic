@@ -27,8 +27,10 @@
     
     self.view.backgroundColor = kBlackColor;
     @weakify(self)
+    [SVProgressHUD show];
     [[self.viewModel.fetchComicPagesCommand execute:nil] subscribeNext:^(RLMArray* arr) {
         @strongify(self)
+        [SVProgressHUD dismiss];
         NSMutableArray* photoArr = [[NSMutableArray alloc] initWithCapacity:arr.count];
         for (ComicPicEntity* entity in arr) {
             MJPhoto* photo = [[MJPhoto alloc] init];
@@ -38,6 +40,7 @@
         self.dataSource = photoArr;
         [self showBrowser];
     } error:^(NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"连接超时"];
         NSLog(@"%@",error);
     }];
 }

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CategoryEntity.h"
+#import "PikaViewController.h"
 
-@interface ComicListViewController : UIViewController
+@interface ComicListViewController : PikaViewController
 
 @property (nonatomic,strong) CategoryEntity* entity;
 

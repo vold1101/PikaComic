@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PikaViewController.h"
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : PikaViewController
 
 @end
